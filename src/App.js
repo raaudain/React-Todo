@@ -74,7 +74,7 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="container">
         <h2>Gottado List</h2>
         <TodoForm addItem={this.addItem} 
         />

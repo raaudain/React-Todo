@@ -1,6 +1,88 @@
-.itemCompleted{
-    text-decoration: line-through;
-    
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html{
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+    background-color: #100e17;
+    color: #ffffff;  
+}
+
+
+
+.container{
+    margin: auto;
+    width: 50%;
+    font-size: 1.6rem;
+}
+
+h2{
+    font-size: 8rem;
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
     
 }
 
+.inputField{
+    width: 700px;
+    height: 90px;
+    border-radius: 10px;
+    font-size: 5rem;
+    padding: 0 10px;
+}
+
+.addBtn{
+    background-color: #FF8C00;
+    width: 200px;
+    height: 95px;
+    border: none;
+    font-size: 5rem;
+    color: #ffffff;
+    margin-left: 20px;
+    border-radius: 10px;
+    /* font-family: "Roboto", sans-serif; */
+}
+
+
+.item{
+    padding-top: 1px;
+    padding-bottom: 5px;
+    margin: 20px 0;
+    font-size: 4rem;
+    width: 952px;
+    height: 100px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #2E8B57;
+}
+
+.itemCompleted{
+    text-decoration: line-through; 
+    padding-top: 1px;
+    padding-bottom: 5px;
+    margin: 20px 0;
+    font-size: 4rem;
+    width: 952px;
+    height: 100px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #2E8B57;
+}
+
+.clearBtn{
+    margin-top: 20px;
+    font-size: 4rem;
+    width: 400px;
+    height: 100px;
+    background-color: #8B0000;
+    font-size: 4rem;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    /* font-family: "Roboto", sans-serif; */
+}

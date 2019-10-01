@@ -21,18 +21,13 @@ class TodoForm extends React.Component{
         this.props.addItem(this.state.item);
     }
 
-    // removeItem = element => {
-    //     element.preventDefault();
-    //     this.props.clearCompleted(this.state.item);
-    // }
-
-
 
     render(){
         return(
             
-            <form onSubmit={this.submitItem}>
+            <form className="form" onSubmit={this.submitItem}>
                 <input
+                    className="inputField"
                     type="text"
                     value={this.item}
                     name="item"
@@ -40,7 +35,7 @@ class TodoForm extends React.Component{
                     
                 />
 
-                <button>Add</button>
+                <button className="addBtn">Add</button>
 
                 {/* <button className="clearBtn"
                     onClick={}>Clear Completed</button> */}
