@@ -1,6 +1,5 @@
 import React from "react";
 
-
 class TodoForm extends React.Component{
     constructor(){
         super();
@@ -11,16 +10,15 @@ class TodoForm extends React.Component{
 
     handleChanges = event => {
         this.setState({
-            [event.target.name]: event.target.value
+            [event.target.name]: event.target.value 
         });
     }
 
     submitItem = event => {
         event.preventDefault();
-        event.target.reset(); // Reset value to blank
-        this.props.addItem(this.state.item);
+        event.target.reset(); // Resets value to blank
+        this.props.addItem(this.state.item); // addItem function located in App.js
     }
-
 
     render(){
         return(
@@ -32,7 +30,6 @@ class TodoForm extends React.Component{
                     value={this.item}
                     name="item"
                     onChange={this.handleChanges}
-                    
                 />
 
                 <button className="addBtn">Add</button>
@@ -40,9 +37,7 @@ class TodoForm extends React.Component{
                 {/* <button className="clearBtn"
                     onClick={}>Clear Completed</button> */}
             </form>
-
-            
-            
+ 
         );
     }
 }

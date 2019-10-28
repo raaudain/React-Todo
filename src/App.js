@@ -1,20 +1,19 @@
 import React from 'react';
-import TodoList from "./components/TodoComponents/TodoList";
-import TodoForm from "./components/TodoComponents/TodoForm";
-import "./components/TodoComponents/Todo.css"
+import TodoList from "./components/TodoList";
+import TodoForm from "./components/TodoForm";
+import "./components/Todo.css"
+
 
 const todosData =[
   {
-    name: "Test",
+    name: "Go to grocery store",
     id: 1234,
     completed: false
   }
 ]
 
 class App extends React.Component {
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
+  
   constructor(){
     super();
     this.state = {
@@ -22,8 +21,8 @@ class App extends React.Component {
     };
   }
 
+  // Toggles item as TRUE or FALSE when clicked.
   toggleItem = id => {
-    console.log(id);
     this.setState({
       todos: this.state.todos.map(item => {
         if(item.id === id){
@@ -49,37 +48,24 @@ class App extends React.Component {
     };
     this.setState({
       todos: [...this.state.todos, newItem] // Adds new item to the end of the Todos array.
+
     })
   }
 
   clearCompleted = () => {
     this.setState({
-      todos: this.state.todos.filter(item => item.completed === false) // Filtering out completed items
+      todos: this.state.todos.filter(item => item.completed === false) // Looking for uncompleted tasks
     })
   }
 
-
-
-  // handleChanges = element => {
-  //   this.setState({
-  //       [element.target.name]: element.target.value
-  //   });
-  // }
-
-  // submitItem = element => {
-  //   element.preventDefault();
-  //   this.props.addItem(this.state.item);
-  // }
-
   render() {
-
     return (
       <div className="container">
-        <h2>Gottado List</h2>
-        <TodoForm addItem={this.addItem} 
+        <h2>Gotta-do List</h2>
+        <TodoForm 
+          addItem={this.addItem} 
         />
       
-
       <TodoList
         todos={this.state.todos}
         toggleItem={this.toggleItem}
@@ -90,10 +76,5 @@ class App extends React.Component {
   }
 
 }
-
-
-
-
-  
 
 export default App;
